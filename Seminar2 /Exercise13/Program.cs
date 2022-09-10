@@ -6,7 +6,7 @@ if (num < 100)
 
 else
 {
-    while ( num > 1000)
+    while ( num > 999)
         num = num / 10;
     Console.WriteLine(num % 10);
 }
