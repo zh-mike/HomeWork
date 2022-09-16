@@ -14,7 +14,6 @@ void Sum(double[] arrey)
     int i = 0;
     double min = arrey[i];
     double max = arrey[i];
-    double sum = 0;
     for (i = 0; i < arrey.Length; i++)
     {
         if(arrey[i] < min) min = arrey[i];
