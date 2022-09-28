@@ -1,7 +1,6 @@
 ﻿// Задача 54: Задайте двумерный массив. Напишите программу, 
 // которая упорядочит по убыванию элементы каждой строки двумерного массива.
 
-// Меняем первую строку двумерного массива с последней
 Console.Clear();
 
 
@@ -32,24 +31,22 @@ void ReleaseMatrix(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            int k = j;
             int max = matrix[i, j];
             int maxK = j;
-            int x = 0;
-            while (k < matrix.GetLength(1))
+            int change = 0;
+            for (int k = j + 1; k < matrix.GetLength(1); k++)
             {
                 if (max < matrix[i, k])
                 {
                     max = matrix[i, k];
                     maxK = k;
                 }
-                k++;
             }
-            if (j!=maxK)
+            if (j != maxK)
             {
-                x = matrix[i, j];
+                change = matrix[i, j];
                 matrix[i, j] = matrix[i, maxK];
-                matrix[i, maxK] = x;
+                matrix[i, maxK] = change;
             }
 
         }
